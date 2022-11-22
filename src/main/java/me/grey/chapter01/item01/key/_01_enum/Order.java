@@ -1,6 +1,5 @@
-package me.grey.chapter01.item01.key.enum01;
+package me.grey.chapter01.item01.key._01_enum;
 
-import java.util.Arrays;
 import java.util.EnumSet;
 
 public class Order {
