@@ -26,7 +26,7 @@ public interface HelloService {
      * ( 자바 8은 public한 static, default 메서드만 제공 )
      * 내부에서만 사용할 용도
      */
-    static private void prepareMessage (){
+    static  void prepareMessage (){
 
     };
 
