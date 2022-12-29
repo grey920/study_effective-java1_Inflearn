@@ -63,6 +63,8 @@ out/
 # JIRA plugin
 atlassian-ide-plugin.xml
 
+.idea/git_toolbox_prj.xml
+
 # Cursive Clojure plugin
 .idea/replstate.xml
 
