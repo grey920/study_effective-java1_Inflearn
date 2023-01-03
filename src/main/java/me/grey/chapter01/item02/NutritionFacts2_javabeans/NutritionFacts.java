@@ -6,7 +6,7 @@ package me.grey.chapter01.item02.NutritionFacts2_javabeans;
  * 기본생성자와 getter, setter를 사용하는 패턴.
  * 장점은 객체 생성이 굉장히 간단해진다는 점. (이전에는 파라미터로 다 넘겨줘야했고, 따라서 많으면 뭐가 들어가야 하는지 헷갈렸다)
  * 단점은 1. 어디까지 셋팅해야 완전한 객체인건지 알기 어렵다 (== 일관성이 깨진다) -> 주석남기고 문서화하는 방법밖에 없다.
- * 2. setter가 있어서 불변객체로 만들기 어렵다.
+ * 2. setter가 있어서 불변객체로 만들기 어렵다. -> freezing을 구현해서 할 수 있지만 현업에서는 잘 사용하지 않음.
  *
  * 1.의 단점은 '필수' 필드들은 기본 생성자로 받고, 옵셔널한 필드들은 setter로 받게 하여 처리할 수 있지만, 2.의 단점이 여전히 남는다. java에서는 프리징 기능을 임의로 구현해야 함
  * ==> 그래서 이 책에서 추천하는게 "빌더"!!!
@@ -53,6 +53,8 @@ public class NutritionFacts {
 
     public static void main(String[] args) {
         NutritionFacts cocaCola = new NutritionFacts();
+
+        // setter가 있으면 immutable하게 만들 수 없다 -> 불변객체를 만들기 위한 방법 : 객체 freezing (자바엔 없는 기능)
         cocaCola.setServingSize(240);
         cocaCola.setServings(8);
 
